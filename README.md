@@ -123,18 +123,53 @@ This project is configured for automatic deployment to GitHub Pages using GitHub
    - Once deployed, your app will be available at:
    - `https://apih99.github.io/terribleStartup/`
 
-### Environment Variables for Production
-For the AI features to work in production, you'll need to set up environment variables:
+### 🔐 Adding Your AI Key Securely
 
-**Option 1: Fork and Deploy Privately**
-- Fork this repo to keep your API key private
-- Add your `VITE_GEMINI_API_KEY` to your local `.env` file
-- The public demo will run in fallback mode (which is still hilarious!)
+To enable AI-powered generation in production, you need to add your Gemini API key using **GitHub Secrets** (the secure way):
 
-**Option 2: Use GitHub Secrets (Advanced)**
-- Go to **Settings** → **Secrets and variables** → **Actions**
-- Add `VITE_GEMINI_API_KEY` as a repository secret
-- Modify the workflow to use the secret during build
+#### **Step 1: Get Your Gemini API Key**
+1. Visit [Google AI Studio](https://makersuite.google.com/app/apikey)
+2. Sign in with your Google account
+3. Click **"Create API Key"**
+4. Copy the generated key
+
+#### **Step 2: Add API Key to GitHub Secrets**
+1. Go to your repository: `https://github.com/apih99/terribleStartup`
+2. Click **Settings** tab
+3. In the left sidebar, click **Secrets and variables** → **Actions**
+4. Click **"New repository secret"**
+5. Set **Name**: `VITE_GEMINI_API_KEY`
+6. Set **Value**: `your_actual_api_key_here`
+7. Click **"Add secret"**
+
+#### **Step 3: Redeploy**
+1. Make any small change to trigger a new deployment, or
+2. Go to **Actions** tab → **Deploy to GitHub Pages** → **Run workflow**
+
+#### **🔒 Security Benefits:**
+- ✅ **Encrypted Storage**: API key is encrypted and never visible in your code
+- ✅ **Build-Time Only**: Only GitHub Actions can access the secret during builds
+- ✅ **Public Repository Safe**: Secure to use in public repositories
+- ✅ **No Client Exposure**: API key is compiled into the build, not exposed to browsers
+- ✅ **No Network Leaks**: API calls happen from user's browser to Google directly
+
+#### **⚠️ Important Security Note:**
+Once deployed with an API key, the Vite build process includes the key in the compiled JavaScript bundle. This means:
+- The key becomes part of the static files served to users
+- Advanced users could potentially extract it from browser dev tools
+- **Recommendation**: Use API key restrictions in Google Cloud Console to limit usage to your domain
+
+#### **Alternative Options:**
+
+**Option A: Public Demo (Current)**
+- Repository works without API key
+- Uses clever fallback ideas (still hilarious!)
+- Perfect for showcasing your project
+
+**Option B: Private Fork**
+- Fork this repo privately
+- Add API key to your private `.env` file  
+- Deploy privately with full AI features
 
 ## 🎭 Why This Exists
 
