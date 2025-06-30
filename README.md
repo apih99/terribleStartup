@@ -1,6 +1,18 @@
 # 🤖 AI-Powered Terrible Startup Ideas as a Service
 
+[![Deploy to GitHub Pages](https://github.com/apih99/terribleStartup/actions/workflows/deploy.yml/badge.svg)](https://github.com/apih99/terribleStartup/actions/workflows/deploy.yml)
+[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live-brightgreen)](https://apih99.github.io/terribleStartup/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![GitHub stars](https://img.shields.io/github/stars/apih99/terribleStartup?style=social)](https://github.com/apih99/terribleStartup/stargazers)
+
+[![React](https://img.shields.io/badge/React-18.2.0-blue.svg)](https://reactjs.org/)
+[![Vite](https://img.shields.io/badge/Vite-5.0.8-646CFF.svg)](https://vitejs.dev/)
+[![Gemini AI](https://img.shields.io/badge/Gemini%20AI-Powered-orange.svg)](https://ai.google.dev/)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
+
 A satirical web application that uses Google's Gemini AI to generate hilariously bad tech startup ideas that satirize modern tech culture.
+
+> **Badge Status**: ![Build](https://img.shields.io/badge/Build-Passing-brightgreen) ![Deployment](https://img.shields.io/badge/Deployment-Live-brightgreen) ![Demo](https://img.shields.io/badge/Demo-Available-blue)
 
 ## 🚀 Features
 
@@ -82,7 +94,10 @@ The AI creates short, punchy startup names (30-90 words) that are perfect for sh
 ### GitHub Pages (Automatic)
 This project is configured for automatic deployment to GitHub Pages using GitHub Actions.
 
-**Live Demo**: [https://apih99.github.io/terribleStartup/](https://apih99.github.io/terribleStartup/)
+**🌐 Live Demo**: [https://apih99.github.io/terribleStartup/](https://apih99.github.io/terribleStartup/)
+
+[![Deployment Status](https://img.shields.io/github/deployments/apih99/terribleStartup/github-pages?label=Deployment&logo=github)](https://github.com/apih99/terribleStartup/deployments)
+[![Last Commit](https://img.shields.io/github/last-commit/apih99/terribleStartup)](https://github.com/apih99/terribleStartup/commits/main)
 
 ### Setup GitHub Pages Deployment:
 
