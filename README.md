@@ -45,7 +45,7 @@ The AI creates short, punchy startup names (30-90 words) that are perfect for sh
 - **CSS3** - Modern styling with gradients and animations
 - **JavaScript** - Async API handling and error management
 
-## 🏃‍♂️ Getting Started
+## 🏃‍♂️  Getting Started
 
 ### Prerequisites
 - Node.js (16+ recommended)
