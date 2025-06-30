@@ -67,10 +67,59 @@ The AI creates short, punchy startup names (30-90 words) that are perfect for sh
    npm run build
    ```
 
+6. **Preview Production Build Locally**
+   ```bash
+   npm run preview
+   ```
+
 ### Important Notes
 - The app will show setup instructions if the API key is not configured
 - There's a fallback system with pre-made terrible ideas if the API fails
 - API calls are rate-limited by Google - be mindful of usage
+
+## 🚀 Deployment
+
+### GitHub Pages (Automatic)
+This project is configured for automatic deployment to GitHub Pages using GitHub Actions.
+
+**Live Demo**: [https://apih99.github.io/terribleStartup/](https://apih99.github.io/terribleStartup/)
+
+### Setup GitHub Pages Deployment:
+
+1. **Push to GitHub** (if you haven't already):
+   ```bash
+   git add .
+   git commit -m "Initial commit"
+   git push origin main
+   ```
+
+2. **Enable GitHub Pages**:
+   - Go to your repository: `https://github.com/apih99/terribleStartup`
+   - Navigate to **Settings** → **Pages**
+   - Under **Source**, select **GitHub Actions**
+   - Save the settings
+
+3. **Automatic Deployment**:
+   - Every push to the `main` branch will automatically trigger deployment
+   - The GitHub Action will build and deploy your app
+   - Check the **Actions** tab to monitor deployment progress
+
+4. **Access Your Live App**:
+   - Once deployed, your app will be available at:
+   - `https://apih99.github.io/terribleStartup/`
+
+### Environment Variables for Production
+For the AI features to work in production, you'll need to set up environment variables:
+
+**Option 1: Fork and Deploy Privately**
+- Fork this repo to keep your API key private
+- Add your `VITE_GEMINI_API_KEY` to your local `.env` file
+- The public demo will run in fallback mode (which is still hilarious!)
+
+**Option 2: Use GitHub Secrets (Advanced)**
+- Go to **Settings** → **Secrets and variables** → **Actions**
+- Add `VITE_GEMINI_API_KEY` as a repository secret
+- Modify the workflow to use the secret during build
 
 ## 🎭 Why This Exists
 
